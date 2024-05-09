@@ -15,5 +15,5 @@ export const PrivateRoute = ({ children }) => {
 
     return (logged)
         ? children
-        : <Navigate to="/" />
+        : <Navigate to="/" replace={true} />
 }

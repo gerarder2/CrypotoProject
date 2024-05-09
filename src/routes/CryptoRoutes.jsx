@@ -1,6 +1,7 @@
 import { Navigate, Route, Routes } from "react-router"
 import { RegisterPage, CryptoPage } from "../pages";
-import { PrivateRoute, PublicRoute } from "./";
+import { PrivateRoute } from "./PrivateRoutes";
+import { PublicRoute } from "./PublicRoutes";
 
 export const CryptoRoutes = () => {
   return (
@@ -15,7 +16,7 @@ export const CryptoRoutes = () => {
                     <CryptoPage />
                 </PrivateRoute>
             } />
-            <Route path="/*" element={<Navigate to={"/"}/>}/>
+            <Route path="/*" element={<Navigate to={"/"} replace={true} />} />
         </Routes>
     </>
   )

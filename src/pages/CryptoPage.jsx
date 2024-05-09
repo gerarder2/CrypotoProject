@@ -7,18 +7,7 @@ export const CryptoPage = () => {
     
     const {isLoading, setIsLoading, update, user, crypto} = useContext(CryptoContext);
 
-    const actualizar = async () => {
-      setIsLoading(true);
-      const newInfo = await getCrypto();
-      update(newInfo);
-      setIsLoading(false);
-    }
-
-  useEffect(() => {
-      const inverval = setInterval(() => {
-      actualizar();
-    }, 10000)
-  }, [])
+   
 
   return (
     <>
